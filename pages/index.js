@@ -12,6 +12,7 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
+
 const index = () => {
   const containerStyle = useMemo(() => ({ width: 2000, height: 2000 }), []);
   const gridStyle = useMemo(() => ({ height: 2000, width:2000 }), []);
