@@ -6,6 +6,8 @@ import React, {
   StrictMode,
 } from 'react';
 import { createRoot } from 'react-dom/client';
+import 'ag-grid-community';
+import 'ag-grid-enterprise';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
@@ -55,6 +57,9 @@ const index = () => {
       // disable cell data types
       cellDataType: false,
       sortable:true,
+      resizable: true,
+      flex: 1,
+
     };
   }, []);
   const defaultColGroupDef = useMemo(() => {
@@ -100,6 +105,9 @@ const index = () => {
       .then((resp) => resp.json())
       .then((data) => setRowData(data));
   }, []);
+
+
+  
 
   return (
     <div style={containerStyle}>
